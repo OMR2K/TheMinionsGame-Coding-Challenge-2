@@ -1,0 +1,27 @@
+def MinionGame(s):
+    
+    p1l = "aeiou"
+    p2l = "bcdfghjklmnpqrstvwxyz"
+    p1s = 0
+    p2s = 0
+    p1i = input("P1: type a letter or substring")
+    
+    while p1i != s:
+        if p1i[0] not in p1l:
+            p1i = input("ERROR: Must start with a vowel")
+        p1s += s.count(p1i)
+        p1i = input("P1: type a letter or substring")
+
+    p2i = input("P2: type a letter or substring")
+    
+    while p2i != s:
+        if p2i[0] not in p2l:
+            p2i = input("ERROR: Must not start with a vowel")
+        p2s += s.count(Player_two_input)
+        p2i = input("P2: Type a letter or substring")
+    
+    if p1s > p2s:
+        return "P1 wins"
+    elif p2s > p1s:
+        return "P2 wins"
+    return "Draw"
